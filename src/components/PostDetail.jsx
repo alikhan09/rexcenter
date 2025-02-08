@@ -7,16 +7,16 @@ export default function PostDetail({ post, goBack }) {
         ← Back to Posts
       </button>
 
-      <div className="w-110 p-6 border border-gray-300 rounded-lg shadow-lg bg-white ">
+      <div className="w-full md:w-[90%] mx-auto p-6 border border-gray-300 rounded-lg shadow-lg bg-white">
         {/* Display the image if available */}
         {images[post.image] ? (
           <img
             src={images[post.image]}
             alt={post.title}
-            className="w-100 h-100 object-cover rounded-lg mb-4"
+            className="w-full h-full object-cover rounded-lg mb-4"
           />
         ) : (
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center rounded-lg mb-4">
+          <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
             <span className="text-gray-500">No Image Available</span>
           </div>
         )}
